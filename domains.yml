@@ -1,0 +1,69 @@
+default:
+  netcdf:
+    style:
+      linestyle: solid
+      linewidth: 1.5
+      facecolor: none
+      edgecolor: red
+  geojson:
+    style:
+      linestyle: solid
+      linewidth: 0.5
+      facecolor: none
+      edgecolor: red
+  points:
+    style:
+      linestyle: ''
+      marker: 'o'
+      color: 'r'
+      mfc: 'none'
+      mew: 1.5
+  corners:
+    style:
+      linestyle: solid
+      linewidth: 1.5
+  bbox:
+    style:
+      linestyle: solid
+      linewidth: 2
+
+cities_demonstrator:
+  input: points
+  style:
+    mew: 2
+  data:
+    - [-5, 38]
+    - [10, 42]
+
+NUKLEUS:
+  input: netcdf
+  data: data/orog_NUKLEUS-CEU-3.nc
+  relax: 1
+
+TSMP:
+  input: netcdf
+  data: data/EUR-0275_1600x1552_grid_inclbrz_v2.nc
+  relax: 20
+  style:
+    edgecolor: blue
+    linewidth: 3
+
+TSMP_2:
+  input: geojson
+  data: file.geojson
+  style:
+    edgecolor: red
+
+other:
+  input: corners
+  data:
+    - [-11, 35]
+    - [-15, 45]
+    - [ 30, 45]
+    - [ 25, 30]
+  style:
+    color: black
+
+obb:
+  input: bbox
+  data: [-10, 5, 35, 45]
