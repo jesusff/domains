@@ -1,3 +1,54 @@
+EUR-11:
+  input: geojson
+  data: data/EUR-11.geojson
+  style:
+    edgecolor: black
+
+NUKLEUS:
+  input: netcdf
+  data: data/orog_NUKLEUS-CEU-3.nc
+  relax: 1
+  style:
+    edgecolor: yellow
+
+TSMP:
+  input: geojson
+  data: data/TSMP.geojson
+  style:
+    edgecolor: red
+
+I4C-min-south:
+  input: bbox
+  data: [-7, 17, 40.5, 51.5]
+  style:
+    facecolor: red
+    alpha: 0.3
+
+I4C-min-north:
+  input: bbox
+  data: [-5.8, 17, 52.3, 64]
+  style:
+    facecolor: blue
+    alpha: 0.3
+
+I4C-demonstrator-cities:
+  input: cities
+  data:
+    - Paris
+    - Barcelona
+    - Prague
+    - Bergen
+
+I4C-additional-cities:
+  input: cities
+  data:
+    - Hamburg
+    - Newcastle upon Tyne
+    - Copenhagen
+  style:
+    markerfacecolor: none
+    markeredgewidth: 1.5
+
 default:
   netcdf:
     style:
@@ -8,16 +59,16 @@ default:
   geojson:
     style:
       linestyle: solid
-      linewidth: 0.5
+      linewidth: 1.5
       facecolor: none
       edgecolor: red
   points:
-    style:
+    style: &point
       linestyle: ''
       marker: 'o'
       color: 'r'
-      mfc: 'none'
-      mew: 1.5
+  cities:
+    style: *point
   corners:
     style:
       linestyle: solid
@@ -25,45 +76,4 @@ default:
   bbox:
     style:
       linestyle: solid
-      linewidth: 2
-
-cities_demonstrator:
-  input: points
-  style:
-    mew: 2
-  data:
-    - [-5, 38]
-    - [10, 42]
-
-NUKLEUS:
-  input: netcdf
-  data: data/orog_NUKLEUS-CEU-3.nc
-  relax: 1
-
-TSMP:
-  input: netcdf
-  data: data/EUR-0275_1600x1552_grid_inclbrz_v2.nc
-  relax: 20
-  style:
-    edgecolor: blue
-    linewidth: 3
-
-TSMP_2:
-  input: geojson
-  data: file.geojson
-  style:
-    edgecolor: red
-
-other:
-  input: corners
-  data:
-    - [-11, 35]
-    - [-15, 45]
-    - [ 30, 45]
-    - [ 25, 30]
-  style:
-    color: black
-
-obb:
-  input: bbox
-  data: [-10, 5, 35, 45]
+      linewidth: 1.5
