@@ -37,36 +37,16 @@ I4C-min-north:
     facecolor: blue
     alpha: 0.2
 
-Prague-BB:
-  input: bbox
-  data: [11.713062635023391, 17.319547424115935, 48.28010972988082, 51.87796087669918]
-  style:
-    facecolor: black
-    alpha: 0.4
-
-Paris-BB:
-  input: bbox
-  data: [-0.5951, 5.0115, 47.0334, 50.6314]
-  style:
-    facecolor: black
-    alpha: 0.4
-
-Barcelona-BB:
-  input: bbox
-  data:  [-0.2693959696557364, 4.535085712096562, 39.70994449959082, 43.307795646409176]
-  style:
-    facecolor: black
-    alpha: 0.4
-
 I4C-demonstrator-cities:
   input: cities
+  bbox_km: 100
   data:
     - Paris
     - Barcelona
     - Prague
     - Bergen
 
-I4C-additional-cities:
+I4C-tech-testbed-cities:
   input: cities
   data:
     - Hamburg
