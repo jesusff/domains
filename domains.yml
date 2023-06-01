@@ -37,6 +37,27 @@ I4C-min-north:
     facecolor: blue
     alpha: 0.2
 
+Prague-BB:
+  input: bbox
+  data: [12.685650911291706, 16.34695914784762, 48.28010821039211, 51.87796239618789]
+  style:
+    facecolor: black
+    alpha: 0.4
+
+Paris-BB:
+  input: bbox
+  data: [-0.5951, 5.0115, 47.0334, 50.6314]
+  style:
+    facecolor: black
+    alpha: 0.4
+
+Barcelona-BB:
+  input: bbox
+  data:  [4.42459924747142, -0.1589992474714199, 39.709972907102106, 43.30782709289789]
+  style:
+    facecolor: black
+    alpha: 0.4
+
 I4C-demonstrator-cities:
   input: cities
   data:
