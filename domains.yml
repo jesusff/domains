@@ -15,21 +15,27 @@ TSMP:
   input: geojson
   data: data/TSMP.geojson
   style:
-    edgecolor: red
+    edgecolor: "#003c6d"
+
+I4C-CSIC:
+  input: geojson
+  data: data/I4C-CSIC.geojson
+  style:
+    edgecolor: "#af0d16"
 
 I4C-min-south:
   input: bbox
   data: [-7, 17, 40.5, 51.5]
   style:
     facecolor: red
-    alpha: 0.3
+    alpha: 0.2
 
 I4C-min-north:
   input: bbox
   data: [-5.8, 17, 52.3, 64]
   style:
     facecolor: blue
-    alpha: 0.3
+    alpha: 0.2
 
 I4C-demonstrator-cities:
   input: cities
