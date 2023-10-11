@@ -4,38 +4,53 @@ EUR-11:
   style:
     edgecolor: black
 
-NUKLEUS:
-  input: netcdf
-  data: data/orog_NUKLEUS-CEU-3.nc
-  relax: 1
-  style:
-    edgecolor: yellow
-
-TSMP:
-  input: geojson
-  data: data/TSMP.geojson
-  style:
-    edgecolor: "#003c6d"
-
-I4C-CSIC:
-  input: geojson
-  data: data/I4C-CSIC.geojson
-  style:
-    edgecolor: "#af0d16"
-
 I4C-min-south:
   input: bbox
-  data: [-7, 17, 40.5, 51.5]
+  data: [-5.8, 17, 40.5, 51.5]
   style:
     facecolor: red
     alpha: 0.2
 
 I4C-min-north:
   input: bbox
-  data: [-5.8, 17, 52.3, 64]
+  data: [-7, 17, 52.3, 64]
   style:
     facecolor: blue
     alpha: 0.2
+
+GERICS-REMO-S:
+  input: netcdf
+  data: i4c_domains_all/orog_RemoSouth-d01_fx.nc
+  relax: 10
+  style:
+    edgecolor: orange
+
+GERICS-REMO-N:
+  input: netcdf
+  data: i4c_domains_all/orog_RemoNorth-d01_fx.nc
+  relax: 10
+  style:
+    edgecolor: orange
+
+ICTP-RegCM5:
+  input: netcdf
+  data: i4c_domains_all/topo_ictp.nc
+  relax: 1 # unknown!
+  style:
+    edgecolor: lightcoral
+
+CNRM-AROME:
+  input: netcdf
+  data: i4c_domains_all/orog_ext-ALP3_CNRM.nc
+  relax: 1
+  style:
+    edgecolor: blue
+
+CSIC-WRF451:
+  input: geojson
+  data: data/CSIC-WRF451.geojson
+  style:
+    edgecolor: grey
 
 I4C-demonstrator-cities:
   input: cities
