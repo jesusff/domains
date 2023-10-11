@@ -19,30 +19,26 @@ I4C-min-north:
     alpha: 0.2
 
 GERICS-REMO-S:
-  input: netcdf
-  data: i4c_domains_all/orog_RemoSouth-d01_fx.nc
-  relax: 10
+  input: geojson
+  data: data/GERICS-REMO-S.geojson
   style:
     edgecolor: orange
 
 GERICS-REMO-N:
-  input: netcdf
-  data: i4c_domains_all/orog_RemoNorth-d01_fx.nc
-  relax: 10
+  input: geojson
+  data: data/GERICS-REMO-N.geojson
   style:
     edgecolor: orange
 
-ICTP-RegCM5:
-  input: netcdf
-  data: i4c_domains_all/topo_ictp.nc
-  relax: 1 # unknown!
+ICTP-RegCM5: # TODO: confirm relax zone
+  input: geojson
+  data: data/ICTP-RegCM5.geojson
   style:
     edgecolor: lightcoral
 
 CNRM-AROME:
-  input: netcdf
-  data: i4c_domains_all/orog_ext-ALP3_CNRM.nc
-  relax: 1
+  input: geojson
+  data: data/CNRM-AROME.geojson
   style:
     edgecolor: blue
 
