@@ -34,7 +34,7 @@ ICTP-RegCM5: # TODO: confirm relax zone
   input: geojson
   data: data/ICTP-RegCM5.geojson
   style:
-    edgecolor: lightcoral
+    edgecolor: red
 
 CNRM-AROME:
   input: geojson
@@ -42,11 +42,17 @@ CNRM-AROME:
   style:
     edgecolor: blue
 
+NORCE-WRF451:
+  input: geojson
+  data: data/NORCE-WRF451.geojson
+  style:
+    edgecolor: green
+
 CSIC-WRF451:
   input: geojson
   data: data/CSIC-WRF451.geojson
   style:
-    edgecolor: grey
+    edgecolor: green
 
 I4C-demonstrator-cities:
   input: cities
