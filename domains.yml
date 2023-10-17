@@ -54,6 +54,12 @@ CSIC-WRF451:
   style:
     edgecolor: green
 
+DMI-HCLIM:
+  input: geojson
+  data: data/DMI-HCLIM.geojson
+  style:
+    edgecolor: yellow
+
 I4C-demonstrator-cities:
   input: cities
   bbox_km: 100
