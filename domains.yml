@@ -71,10 +71,10 @@ I4C-demonstrator-cities:
 
 I4C-tech-testbed-cities:
   input: cities
+  bbox_km: 100
   data:
     - Hamburg
     - Newcastle upon Tyne
-    - Copenhagen
   style:
     markerfacecolor: none
     markeredgewidth: 1.5
