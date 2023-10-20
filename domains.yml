@@ -4,25 +4,25 @@ EUR-11:
   style:
     edgecolor: black
 
-I4C-min-south:
-  input: bbox
-  data: [-5.8, 17, 40.5, 51.5]
-  style:
-    facecolor: red
-    alpha: 0.2
-
-I4C-min-north:
+NSEA-3-minimum:
   input: bbox
   data: [-7, 17, 52.3, 64]
   style:
     facecolor: blue
     alpha: 0.2
 
-GERICS-REMO-S:
-  input: geojson
-  data: data/GERICS-REMO-S.geojson
+ALPX-3-minimum:
+  input: bbox
+  data: [-5.8, 17, 40.5, 51.5]
   style:
-    edgecolor: orange
+    facecolor: red
+    alpha: 0.2
+
+DMI-HCLIM:
+  input: geojson
+  data: data/DMI-HCLIM.geojson
+  style:
+    edgecolor: yellow
 
 GERICS-REMO-N:
   input: geojson
@@ -30,7 +30,13 @@ GERICS-REMO-N:
   style:
     edgecolor: orange
 
-ICTP-RegCM5: # TODO: confirm relax zone
+GERICS-REMO-S:
+  input: geojson
+  data: data/GERICS-REMO-S.geojson
+  style:
+    edgecolor: orange
+
+ICTP-RegCM5:
   input: geojson
   data: data/ICTP-RegCM5.geojson
   style:
@@ -53,12 +59,6 @@ CSIC-WRF451:
   data: data/CSIC-WRF451.geojson
   style:
     edgecolor: green
-
-DMI-HCLIM:
-  input: geojson
-  data: data/DMI-HCLIM.geojson
-  style:
-    edgecolor: yellow
 
 I4C-demonstrator-cities:
   input: cities
