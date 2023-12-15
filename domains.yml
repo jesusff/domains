@@ -21,6 +21,13 @@ FZJ-TSMP:
     edgecolor: blue
     linestyle: dashed
 
+FPS-URB-RCC-PARIS-3:
+  input: geojson
+  data: data/FPS-URB-RCC-PARIS-3.geojson
+  style:
+    edgecolor: red
+    linestyle: dashed
+
 #
 # I4C domains
 #
