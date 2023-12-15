@@ -4,6 +4,26 @@ EUR-11:
   style:
     edgecolor: black
 
+#
+# CP domains in Europe
+#
+NUKLEUS:
+  input: geojson
+  data: data/NUKLEUS.geojson
+  style:
+    edgecolor: yellow
+    linestyle: dashed
+
+FZJ-TSMP:
+  input: geojson
+  data: data/TSMP.geojson
+  style:
+    edgecolor: blue
+    linestyle: dashed
+
+#
+# I4C domains
+#
 NSEA-3-minimum:
   input: bbox
   data: [-7, 17, 52.3, 64]
@@ -62,7 +82,6 @@ CSIC-WRF451:
 
 I4C-demonstrator-cities:
   input: cities
-  bbox_km: 100
   data:
     - Paris
     - Barcelona
@@ -71,7 +90,6 @@ I4C-demonstrator-cities:
 
 I4C-tech-testbed-cities:
   input: cities
-  bbox_km: 100
   data:
     - Hamburg
     - Newcastle upon Tyne
