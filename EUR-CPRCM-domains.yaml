@@ -7,6 +7,13 @@ EUR-11:
 #
 # CP domains in Europe
 #
+ALP-3-minimum:
+  input: bbox
+  data: [1, 17, 40, 50]
+  style:
+    facecolor: red
+    alpha: 0.2
+
 NUKLEUS:
   input: geojson
   data: data/NUKLEUS.geojson
@@ -26,6 +33,22 @@ FPS-URB-RCC-PARIS-3:
   data: data/FPS-URB-RCC-PARIS-3.geojson
   style:
     edgecolor: red
+    linestyle: dashed
+
+HungaroMet-HCLIM43:
+  input: bbox
+  data: [12.0, 28.3, 43.6, 50.7]
+  style:
+    facecolor: none
+    edgecolor: darkorange
+    linestyle: dashed
+
+UDAG-ICON-CLM:
+  input: bbox
+  data: [4, 20, 44, 56]
+  style:
+    facecolor: none
+    edgecolor: darkgreen
     linestyle: dashed
 
 #
