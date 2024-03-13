@@ -128,6 +128,11 @@ I4C-tech-testbed-cities:
     markeredgewidth: 1.5
 
 default:
+  CRS:
+    pole_longitude: -162.
+    pole_latitude: 39.25
+    central_rotated_longitude: 0.0
+  lonlat_extent: [-15, 40, 25, 73]
   netcdf:
     style:
       linestyle: solid
