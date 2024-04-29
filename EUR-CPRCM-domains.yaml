@@ -14,6 +14,14 @@ ALP-3-minimum:
     facecolor: red
     alpha: 0.2
 
+SMHI-NorCP:
+  # Original data: orog_NorCP_HCLIM38-AROME_3km.nc (b35d0e3ea63c3688fb638253dd78f738)
+  input: geojson
+  data: data/SMHI-NorCP.geojson
+  style:
+    edgecolor: cyan
+    linestyle: dashed
+
 NUKLEUS:
   input: geojson
   data: data/NUKLEUS.geojson
