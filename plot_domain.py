@@ -71,7 +71,7 @@ def plot_bbox(axis, bbox, add_legend = True, **style):
   interp = corners[0,:].reshape(1,2)
   for k in range(0,4):
     interp = np.append(interp, (1-p)*corners[k,:] + p*corners[k+1,:], axis=0)
-  axis.add_geometries([Polygon(interp)], crs=lonlat, **style, zorder=2)
+  axis.add_geometries([Polygon(interp)], crs=lonlat, **style, zorder=3)
   if add_legend:
     proxy_artist.append(mpatches.Rectangle((0,0),1,0.1, **style))
 
@@ -153,6 +153,6 @@ if __name__ == '__main__':
       do_plot(ax, plot_data[key])
       legend_text.append(key)
     ax.legend(proxy_artist, legend_text, bbox_to_anchor=(1.35, 1), fancybox=True)
-    fig.tight_layout()
+    fig.tight_layout(pad=2)
     plt.savefig(f'./{domain}-CPRCM-domains.png', dpi = 150)
     plt.savefig(f'./{domain}-CPRCM-domains.pdf')
