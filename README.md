@@ -2,6 +2,5 @@
 
 # Plot RCM domains
 
-CP RCM domains for different CORDEX domains
-
-![CPRCM domain over Europe](https://meteo.unican.es/work/jesusff/domains/EUR-CPRCM-domains.png)
+CP RCM domains for different CORDEX domains:
+[EUR](https://meteo.unican.es/work/jesusff/domains/EUR-CPRCM-domains.png)
