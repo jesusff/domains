@@ -1,0 +1,11 @@
+colors:
+  evaluation: lightblue
+  evaluation_progress: blue
+  reference: lightgreen
+  reference_progress: green
+  scenarios: lightred
+  scenarios_progress: red
+
+style:
+  linewidth: 7
+  solid_capstyle: butt # round
