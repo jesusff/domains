@@ -1,11 +1,15 @@
 colors:
-  evaluation: lightblue
-  evaluation_progress: blue
-  reference: lightgreen
-  reference_progress: green
-  scenarios: lightred
-  scenarios_progress: red
+  evaluation: "#b3e08b"
+  evaluation_progress: "#2ea228"
+  reference: "#fdc170"
+  reference_progress: "#ff8002"
+  scenarios: "#cbb3d7"
+  scenarios_progress: "#6b3a9b"
+  text: "#222222"
 
 style:
   linewidth: 7
   solid_capstyle: butt # round
+
+params:
+  gap: 0.11
