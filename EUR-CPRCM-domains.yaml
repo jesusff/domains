@@ -52,8 +52,9 @@ HungaroMet-HCLIM43:
     linestyle: dashed
 
 UDAG-ICON-CLM:
-  input: bbox
-  data: [4, 20, 44, 56]
+  # Original data: data/grid-rotated_CECPI-Ger.nc (7e2c41ba36d35279688b601d4d613975)
+  input: geojson
+  data: data/UDAG-ICON-CLM.geojson
   style:
     facecolor: none
     edgecolor: darkgreen
