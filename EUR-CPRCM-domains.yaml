@@ -53,6 +53,9 @@ HungaroMet-HCLIM43:
 
 UDAG-ICON-CLM:
   # Original data: data/grid-rotated_CECPI-Ger.nc (7e2c41ba36d35279688b601d4d613975)
+  # The grid for the simulations will be a triangular ICON grid (R13B7) with a
+  # grid spacing of about 3 km. The data will be mapped on the the rotated grid
+  # in the postprocessing.
   input: geojson
   data: data/UDAG-ICON-CLM.geojson
   style:
