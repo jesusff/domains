@@ -63,7 +63,7 @@ if __name__ == '__main__':
     with open('periods_config.yaml', "r") as file:
         config = yaml.safe_load(file)
     
-    fig, ax = plt.subplots(figsize=(10,5))
+    fig, ax = plt.subplots(figsize=(10,7))
     yticklabels = []
     gap = config['params']['gap']
     style = config['style']

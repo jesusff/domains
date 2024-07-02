@@ -5,6 +5,27 @@
     - 2041-2050@completed Near future
     - 2090-2099@completed Far future
 
+"NUKLEUS CEU-3 MPI":
+  evaluation: 2005-2014@completed ERA5
+  reference: 1961-1990@completed
+  scenarios:
+    - 2037-2066@completed GWL 2K # MPI-ESM1-2-HR
+    - 2066-2095@completed GWL 3K
+
+"NUKLEUS CEU-3 EC-Earth":
+  evaluation: 2005-2014@completed ERA5
+  reference: 1961-1990@completed
+  scenarios:
+    - 2024-2053@completed GWL 2K # EC-Earth3-Veg
+    - 2047-2076@completed GWL 3K
+
+"NUKLEUS CEU-3 MIROC":
+  evaluation: 2005-2014@completed ERA5
+  reference: 1961-1990@completed
+  scenarios:
+    - 2038-2067@completed GWL 2K # MIROC6
+    - 2070-2099@completed GWL 3K
+
 CNRM-MF_CNRM-AROME:
   evaluation: 1959-2023
   reference: 1990-2014@1993
