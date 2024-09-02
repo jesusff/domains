@@ -70,22 +70,23 @@ if __name__ == '__main__':
     for idx, label in enumerate(data):
         for experiment in ['evaluation', 'scenarios', 'reference']:
             yp = ypos(idx, -gap) if experiment == 'evaluation' else ypos(idx, gap)
-            for period in listify(data[label][experiment]):
-                ax.plot(parse_period(period), yp, color=config['colors'][experiment], zorder = 2, **style)
-                progress = get_progress(period)
-                if progress:
-                    ax.plot(period_progress(progress, period), yp,
-                        color=config['colors'][f'{experiment}_progress'],
-                        zorder = 3,
-                        **style
-                    )
-                period_label = get_label(period)
-                if period_label:
-                    ax.text(parse_period(period)[0], idx+2*gap,
-                        period_label,
-                        fontsize=10, color=config['colors']['text'], fontweight='light', ha='left', va='bottom',
-                        zorder = 4
-                    )
+            if experiment in data[label]:
+                 for period in listify(data[label][experiment]):
+                     ax.plot(parse_period(period), yp, color=config['colors'][experiment], zorder = 2, **style)
+                     progress = get_progress(period)
+                     if progress:
+                         ax.plot(period_progress(progress, period), yp,
+                             color=config['colors'][f'{experiment}_progress'],
+                             zorder = 3,
+                             **style
+                         )
+                     period_label = get_label(period)
+                     if period_label:
+                         ax.text(parse_period(period)[0], idx+2*gap,
+                             period_label,
+                             fontsize=10, color=config['colors']['text'], fontweight='light', ha='left', va='bottom',
+                             zorder = 4
+                         )
         yticklabels.append(f'{label}')
     
     ax.set_yticks(range(len(data)))

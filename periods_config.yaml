@@ -12,4 +12,4 @@ style:
   solid_capstyle: butt # round
 
 params:
-  gap: 0.11
+  gap: 0.13
