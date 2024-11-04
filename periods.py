@@ -11,7 +11,7 @@ from datetime import datetime
 
 def get_datetime(datestr, end=False):
     datelst = [int(x) for x in datestr.split('/')]
-    datedef = [0, 1, 1] if not end else [0, 12, 31]
+    datedef = [0, 1, 1] if not end else [0, 12, 30]
     for ii, val in enumerate(datedef):
       if len(datelst) <= ii:
         datelst.append(datedef[ii])
