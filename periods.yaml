@@ -9,7 +9,7 @@
   evaluation: 2014-2023
 
 CNRM-MF_CNRM-AROME:
-  evaluation: 1959-2023@1979
+  evaluation: 1959-2023@1993
   reference: 1990-2014@completed
   scenarios:
     - 2009-2028 GWL1
@@ -17,27 +17,35 @@ CNRM-MF_CNRM-AROME:
     - 2043-2062 GWL2
     - 2063-2082 GWL3
     - 2080-2099 GWL4
-    - 2015-2100@2018 # Full transient to cover all GWL
+    - 2015-2100@2035 # Full transient to cover all GWL
 
 CSIC_WRF451:
   evaluation: 2000-2009@2000
-  reference: 1995-2014@1998/08
+  reference: 1995-2014@2003/05
   scenarios:
     - 2037-2056 GWL1.5 # NorESM2-MM r1 ssp370
     - 2053-2072 GWL2
-    - 2081-2100@2082/06 GWL3
+    - 2081-2100@2083/09 GWL3
 
 NORCE_WRF451:
   evaluation: 2000-2009@2000/03
-  reference: 1995-2014@1999
+  reference: 1995-2014@2007
   scenarios:
     - 2037-2056 GWL1.5 # NorESM2-MM r1 ssp370
     - 2053-2072 GWL2
-    - 2081-2100@2085 GWL3
+    - 2081-2100@2092 GWL3
 
-GERICS_REMO:
-  evaluation: 2000-2009@2005
+GERICS_REMO_ALPX:
+  evaluation: 2000-2009@completed
   reference: 1995-2014
+  scenarios:
+    - 2025-2044 GWL1.5 # MPI-ESM-1-2-HR r1 ssp370
+    - 2041-2060 GWL2
+    - 2072-2091 GWL3
+
+GERICS_REMO_NSEA:
+  evaluation: 2000-2009@completed
+  reference: 1995-2014@1996
   scenarios:
     - 2025-2044 GWL1.5 # MPI-ESM-1-2-HR r1 ssp370
     - 2041-2060 GWL2
@@ -55,8 +63,14 @@ ICTP_RegCM5:
 
 DMI_HCLIM:
   evaluation: 2000-2009
-  reference: 1995-2014
+  reference: 1995-2014@1999/01
   scenarios:
     - 2002-2021 GWL1.5 # EC-Earth3-Veg r1 ssp370
     - 2023-2042 GWL2
     - 2048-2067 GWL3
+    # Alternative simulation split:
+    - 2018-2055@2022/11
+    - 2056-2076@2060/05
+
+
+
