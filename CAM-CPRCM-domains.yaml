@@ -18,8 +18,8 @@ CAM-I4C-minimum:
     alpha: 0.2
 
 ICTP-CAR-4:
-  input: bbox
-  data: [-115, -58, 10, 35]
+  input: geojson
+  data: data/ICTP-CAR-4.geojson
   style:
     facecolor: none
     edgecolor: red
@@ -36,7 +36,7 @@ default:
     pole_longitude: 113.98
     pole_latitude: 75.74
     central_rotated_longitude: 0.0
-  lonlat_extent: [-118, -27, -17, 35]
+  lonlat_extent: [-118, -27, -17, 37]
   netcdf:
     style:
       linestyle: solid

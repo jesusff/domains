@@ -1,0 +1,6 @@
+*.nc
+*.png
+*.pdf
+.ipynb_checkpoints
+__pycache__/
+.vscode/
