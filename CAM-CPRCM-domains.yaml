@@ -1,0 +1,66 @@
+
+"CORDEX CAM-12":
+  input: geojson
+  data: data/CAM-12.geojson
+  style:
+    facecolor: none
+    edgecolor: black
+    linewidth: 2
+
+#
+# Convection-permitting domains in Central America
+#
+CAM-I4C-minimum:
+  input: bbox
+  data: [-87, -58, 10, 28]
+  style:
+    facecolor: red
+    alpha: 0.2
+
+ICTP-CAR-4:
+  input: bbox
+  data: [-115, -58, 10, 35]
+  style:
+    facecolor: none
+    edgecolor: red
+
+NORCE-CAR-4:
+  input: geojson
+  data: data/NORCE-CAR-4.geojson
+  style:
+    edgecolor: blue
+
+default:
+  figsize: [10, 5]
+  CRS:
+    pole_longitude: 113.98
+    pole_latitude: 75.74
+    central_rotated_longitude: 0.0
+  lonlat_extent: [-118, -27, -17, 35]
+  netcdf:
+    style:
+      linestyle: solid
+      linewidth: 1.5
+      facecolor: none
+      edgecolor: red
+  geojson:
+    style:
+      linestyle: solid
+      linewidth: 1.5
+      facecolor: none
+      edgecolor: red
+  points:
+    style: &point
+      linestyle: ''
+      marker: 'o'
+      color: 'r'
+  cities:
+    style: *point
+  corners:
+    style:
+      linestyle: solid
+      linewidth: 1.5
+  bbox:
+    style:
+      linestyle: solid
+      linewidth: 1.5

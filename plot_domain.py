@@ -129,20 +129,31 @@ def do_plot(axis, item):
 if __name__ == '__main__':
   for config_file in glob('???-CPRCM-domains.yaml'):
     domain = config_file[:3]
-    if domain != 'EUR': continue
+    #if domain != 'SAM': continue    
     print(f'** Found config file for domain {domain}: {config_file}')
     with open(config_file, 'r') as f:
         plot_data = yaml.safe_load(f)
     #
     # Plot
     #
-    fig = plt.figure(figsize=(10,9))
-    proj = ccrs.RotatedPole(**plot_data['default']['CRS'])
+    figsize = tuple(plot_data['default'].get('figsize', [10, 9]))
+    fig = plt.figure(figsize=figsize)
+    proj_type = plot_data['default'].get('CRS_proj', 'rotated_pole')
+    if proj_type == 'platecarree':
+      proj = ccrs.PlateCarree()
+    else:
+      proj = ccrs.RotatedPole(**plot_data['default']['CRS'])
     ax = fig.add_subplot(1, 1, 1, projection=proj)
     lonlat = ccrs.PlateCarree()
-    ax.set_extent(plot_data['default']['lonlat_extent'], crs=lonlat)
     ax.stock_img()
-    ax.gridlines(draw_labels=True)
+    ax.set_extent(plot_data['default']['lonlat_extent'], crs=lonlat)
+    gl = ax.gridlines(draw_labels=True)
+    gl.top_labels = True
+    gl.bottom_labels = False
+    gl.left_labels = True
+    gl.right_labels = False
+    if hasattr(gl, 'x_inline'): gl.x_inline = False
+    if hasattr(gl, 'y_inline'): gl.y_inline = False
     ax.coastlines(resolution='50m')
     ax.add_feature(cfeature.BORDERS.with_scale('50m'), linewidth=1)
     ax.add_feature(cfeature.STATES.with_scale('50m'), linewidth=0.25)
@@ -152,7 +163,8 @@ if __name__ == '__main__':
     for key in plot_data:
       do_plot(ax, plot_data[key])
       legend_text.append(key)
-    ax.legend(proxy_artist, legend_text, bbox_to_anchor=(1.35, 1), fancybox=True)
+    legend_bbox_x = plot_data['default'].get('legend_bbox_x', 1.02)
+    ax.legend(proxy_artist, legend_text, loc='upper left', bbox_to_anchor=(legend_bbox_x, 1), fancybox=True, borderaxespad=0)
     fig.tight_layout(pad=2)
     plt.savefig(f'./{domain}-CPRCM-domains.png', dpi = 150)
     plt.savefig(f'./{domain}-CPRCM-domains.pdf')

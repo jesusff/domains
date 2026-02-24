@@ -1,0 +1,52 @@
+SAM-12:
+  input: geojson
+  data: data/SAM-12.geojson
+  style:
+    edgecolor: black
+
+FPS-SESA-minimum:
+  input: bbox
+  data: [-75, -48, -35, -17]
+  style:
+    facecolor: red
+    alpha: 0.2
+
+cities:
+  input: cities
+  data:
+    - Buenos Aires
+
+default:
+  CRS_proj: platecarree
+  CRS: # ignored for platecarree (rotated_pole not working for SAM)
+    pole_longitude: -56.06
+    pole_latitude: 70.60
+    central_rotated_longitude: 0.0
+  lonlat_extent: [-107, -15, -60, 20]
+  netcdf:
+    style:
+      linestyle: solid
+      linewidth: 1.5
+      facecolor: none
+      edgecolor: red
+  geojson:
+    style:
+      linestyle: solid
+      linewidth: 1.5
+      facecolor: none
+      edgecolor: red
+  points:
+    style: &point
+      linestyle: ''
+      marker: 'o'
+      color: 'r'
+  cities:
+    style: *point
+  corners:
+    style:
+      linestyle: solid
+      linewidth: 1.5
+  bbox:
+    style:
+      linestyle: solid
+      linewidth: 1.5
