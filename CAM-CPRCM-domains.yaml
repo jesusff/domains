@@ -42,7 +42,17 @@ I4C-NORCE-CAR-4:
   input: geojson
   data: data/NORCE-CAR-4.geojson
   style:
-    edgecolor: blue
+    edgecolor: green
+
+I4C-REMO-CAR-4:
+  input: bbox
+  data: [-87, -58, 10, 28]
+  style:
+    facecolor: none
+    edgecolor: orange
+    linewidth: 2
+    linestyle: dashed
+
 
 default:
   figsize: [10, 5]
