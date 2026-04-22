@@ -11,18 +11,26 @@ FPS-SESA-minimum:
     facecolor: red
     alpha: 0.2
 
+FPS-ML-SSA-minimum:
+  input: bbox
+  data: [-75, -42, -37, -17]
+  style:
+    facecolor: blue
+    alpha: 0.2
+
 cities:
   input: cities
   data:
     - Buenos Aires
+    - São Paulo
 
 default:
-  CRS_proj: platecarree
-  CRS: # ignored for platecarree (rotated_pole not working for SAM)
+  figsize: [11, 9]
+  CRS:
     pole_longitude: -56.06
     pole_latitude: 70.60
-    central_rotated_longitude: 0.0
-  lonlat_extent: [-107, -15, -60, 20]
+    central_rotated_longitude: 180.0
+  lonlat_extent: [-89, -30, -58, 19]
   netcdf:
     style:
       linestyle: solid
