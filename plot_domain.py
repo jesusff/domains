@@ -129,7 +129,7 @@ def do_plot(axis, item):
 if __name__ == '__main__':
   for config_file in glob('???-CPRCM-domains.yaml'):
     domain = config_file[:3]
-    #if domain != 'SAM': continue    
+    if domain != 'CAM': continue    
     print(f'** Found config file for domain {domain}: {config_file}')
     with open(config_file, 'r') as f:
         plot_data = yaml.safe_load(f)
