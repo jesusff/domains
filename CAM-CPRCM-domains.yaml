@@ -14,6 +14,54 @@
     edgecolor: blue
     linewidth: 2
 
+CAM-25-CNRM:
+  input: geojson
+  data: data/CAM-25-CNRM.geojson
+  style:
+    edgecolor: green
+    linestyle: dashed
+
+#
+# Convection-permitting domains in Central America
+#
+"CORDEX FPS-TC-Car-3":
+  input: geojson
+  data: data/FPS-TC-Car-3.geojson
+  style:
+    edgecolor: red
+    linestyle: dashed
+
+
+EUCP-CAR-4:
+  input: bbox
+  data: [-86, -51, 7, 27]
+  style:
+    edgecolor: gray
+    facecolor: none
+    linestyle: dotted
+
+I4C-CAR-minimum:
+  input: bbox
+  data: [-87, -58, 10, 28]
+  style:
+    facecolor: red
+    alpha: 0.2
+
+I4C-ICTP-CAR-4:
+  input: geojson
+  data: data/ICTP-CAR-4.geojson
+  style:
+    edgecolor: orange
+
+I4C-NORCE-CAR-4:
+  input: geojson
+  data: data/NORCE-CAR-4.geojson
+  style:
+    edgecolor: green
+
+#
+# Domain boundaries (corners and mid-side points)
+#
 "CORDEX CAM-12 new bounds":
   input: points
   style:
@@ -46,12 +94,12 @@
     - [325.08, -6.16]
 
 default:
-  figsize: [10, 5]
+  figsize: [12, 5]
   CRS:
     pole_longitude: 113.98
-    pole_latitude: 70.74
+    pole_latitude: 75.74
     central_rotated_longitude: 0.0
-  lonlat_extent: [-125, -25, -20, 45]
+  lonlat_extent: [-125, 25, -22, 35]
   netcdf:
     style:
       linestyle: solid
